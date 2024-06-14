@@ -3,6 +3,7 @@ data/P2NeRF/
 wandb/
 tmp/
 results/
+.vscode/
 my_local*
 *.pyc
 __pycache__
