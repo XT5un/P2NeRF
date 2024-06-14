@@ -1,0 +1,11 @@
+out
+data/P2NeRF/
+wandb/
+tmp/
+results/
+my_local*
+*.pyc
+__pycache__
+*.ipynb_checkpoints
+*.tar.gz
+debug*

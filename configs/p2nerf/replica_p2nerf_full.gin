@@ -1,0 +1,73 @@
+
+Config.expname = "full"
+Config.checkpoint_dir = "out/replica/p2nerf/room0/full"
+Config.replica_scene = "room0"
+Config.use_wandb = False
+
+# basic configs
+Config.data_dir = "/data/P2NeRF/replica"
+Config.prior_dir = "/data/P2NeRF/prior/"
+Config.dataset_loader = 'replica_prior'
+Config.white_background = False
+Config.near = 0.1
+Config.far = 6.0
+Config.factor = 2
+MLP.density_noise = 1.
+
+# default with regnerf's learning rate setting
+Config.lr_init = 0.002
+Config.lr_final = 0.00002
+Config.lr_delay_steps = 512
+Config.lr_delay_mult = 0.01
+Config.grad_max_norm = 0.1
+Config.grad_max_val = 0.1
+
+# num_views dependent config
+Config.max_steps = 100000
+Config.project = "replica"
+Config.batch_size = 4096
+Config.render_chunk_size = 4096
+Config.train_render_every = 2000
+Config.checkpoint_every = 5000
+
+# p2nerf setting
+Config.check_grad_for_nans = True
+
+# kpts
+Config.kpts_loss_mult = 0.1
+Config.kpts_patch_size = 16
+Config.kpts_early_train_every = 3
+Config.kpts_init_iters = 512        # 3 * 512 = 1536
+Config.kpts_weight_mask_ratio = 0.2
+Config.kpts_weight_mask_weight = 1.0
+
+# depth
+Config.depth_loss_mult = 0.02
+Config.depth_rank_margin = 0.0001
+Config.depth_rank_weight = 1.0
+Config.depth_weight_mask_weight = 0.1
+
+
+############## disable all freenerf and regnerf settings
+# freenerf
+Config.freq_reg = False         # True
+Config.freq_reg_end = 39550
+Config.occ_reg_loss_mult = 0.0
+
+# regnerf
+Config.anneal_nearfar = False       # True
+Config.anneal_nearfar_steps = 256
+Config.anneal_nearfar_perc = 0.5
+
+Config.load_random_rays = False     # True
+Config.n_random_poses = 1000
+Config.batch_size_random = 256
+
+Config.depth_tvnorm_loss_mult = 0.0     # 0.1
+Config.depth_tvnorm_decay = False       # True
+Config.depth_tvnorm_maxstep = 512
+Config.depth_tvnorm_loss_mult_start = 400.0
+Config.depth_tvnorm_loss_mult_end = 0.0     # 0.1
+
+Config.flow_loss_mult = 0.0
+Config.depth_tvnorm_mask_weight = 0.0   # 1.0
