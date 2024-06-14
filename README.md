@@ -14,7 +14,7 @@ pip install -r requirements.txt
 
 ## Data
 
-You can download the data we processed from [here]([http://](https://drive.google.com/file/d/1GzWVmp1PLUL4XCqKCFB0-WjUqzoV1xyp/view?usp=drive_link)) and unzip the downloaded zip into the `data/` folder.
+You can download the data we processed from [here](https://drive.google.com/file/d/1GzWVmp1PLUL4XCqKCFB0-WjUqzoV1xyp/view?usp=drive_link) and unzip the downloaded zip into the `data/` folder.
 
 ## Running
 
