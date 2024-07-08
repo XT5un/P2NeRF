@@ -22,7 +22,7 @@ If you want to generate keypoint prior data, you first need to install torch, pl
 
 ``` bash
 # install
-pip install torch==1.10.0+cu111 --extra-index-url https://download.pytorch.org/whl/torch_stable.html
+pip install torch==1.10.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
 pip install kornia plyfile
 ```
 
