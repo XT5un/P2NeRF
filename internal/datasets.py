@@ -961,8 +961,8 @@ class ReplicaPrior(Dataset):
       self.width = self.width // config.factor
       self.n_examples = self.camtoworlds.shape[0]
     else:
-      self.height, self.width = self.images.shape[1:3]
       self.images_all = np.stack(images, axis=0)
+      self.height, self.width = self.images_all.shape[1:3]
       self.images = self.images_all.copy()
       self.n_examples = self.images.shape[0]
     self.resolution = self.height * self.width

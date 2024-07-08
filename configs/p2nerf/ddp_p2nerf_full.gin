@@ -5,8 +5,8 @@ Config.replica_scene = "scene0710_00"
 Config.use_wandb = False
 
 # basic configs
-Config.data_dir = "/data/P2NeRF/DDP"
-Config.prior_dir = "/data/P2NeRF/prior/"
+Config.data_dir = "data/P2NeRF/DDP"
+Config.prior_dir = "data/P2NeRF/prior/"
 Config.dataset_loader = 'replica_prior'
 Config.white_background = False
 Config.near = 0.1
@@ -43,7 +43,7 @@ Config.kpts_weight_mask_weight = 1.0
 
 # depth
 Config.depth_loss_mult = 0.02
-Config.depth_rank_margin = 0.0001
+Config.depth_weight_mask_margin = 0.1
 Config.depth_rank_weight = 1.0
 Config.depth_weight_mask_weight = 0.1
 
