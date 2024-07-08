@@ -16,6 +16,21 @@ pip install -r requirements.txt
 
 You can download the data we processed from [here](https://drive.google.com/file/d/1GzWVmp1PLUL4XCqKCFB0-WjUqzoV1xyp/view?usp=drive_link) and unzip the downloaded zip into the `data/` folder.
 
+### Keypoints Prior [Optional]
+
+If you want to generate keypoint prior data, you first need to install torch, plyfile and kornia, and then run the `get_kpts_prior.py` script.
+
+``` bash
+# install
+pip install torch==1.10.0+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
+pip install kornia plyfile
+```
+
+``` bash
+# generate keypoints prior
+python get_kpts_prior.py --data_dir data/P2NeRF/DDP --out_dir data/P2NeRF/prior2/DDP
+```
+
 ## Running
 
 ### Scannet dataset
